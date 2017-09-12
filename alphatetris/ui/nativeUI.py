@@ -128,11 +128,11 @@ class nativeUI(QWidget):
         if e.key() == Qt.Key_Left:
             mode = 1
         elif e.key() == Qt.Key_Right:
-            mode = 0
-        elif e.key() == Qt.Key_Up:
+            mode = 2
+        elif e.key() == Qt.Key_Space:
             mode = 3
         elif e.key() == Qt.Key_Down:
-            mode = 2
+            mode = 4
 
         if mode != -1:
             self.playsignal.emit(mode)
