@@ -7,7 +7,7 @@ class Human:
     def setdirection(self,mode):
         self.mode = mode
 
-    def play(self,position,shape,area):
+    def play(self,block,area):
         mode = self.mode
         self.mode = 0
         return mode
@@ -16,5 +16,5 @@ class Computer:
     def __init__(self):
         pass
 
-    def play(self,head,body,area):
+    def play(self,block,area):
         pass

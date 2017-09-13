@@ -135,8 +135,7 @@ class Block:
 
     def update(self,area):
         mode = self.player.play(
-            position=self.position,
-            shape=self.shape,
+            block=self,
             area=area)
 
         if mode == 1:
