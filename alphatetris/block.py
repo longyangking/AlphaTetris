@@ -92,7 +92,8 @@ class Block:
 
     def __rotate(self,area):
         (Nx,Ny) = area.shape
-        x0,y0 = self.position
+        #x0,y0 = self.position
+        x0,y0 = self.body[1]
 
         # TODO specification for every shape
         if True:

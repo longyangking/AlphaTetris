@@ -11,11 +11,10 @@ class Tetris:
         self.player = player.Human()
         self.ui = None
 
-    def start(self):
+    def start(self,sizeunit = 15):
         self.gameengine = gameengine.GameEngine(Nx=self.Nx,Ny=self.Ny,player=self.player,timeperiod=0.5)
         self.gameengine.start()
 
-        sizeunit = 15
         area = self.gameengine.getarea()
         self.ui = ui.UI(pressaction=self.player.setdirection,area=area,sizeunit=sizeunit)
         self.ui.start()

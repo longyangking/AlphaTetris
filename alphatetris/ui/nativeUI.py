@@ -40,7 +40,7 @@ class nativeUI(QWidget):
         self.setGeometry((screen.width()-size.width())/2, 
                         (screen.height()-size.height())/2,
                         Nx*self.sizeunit, Ny*self.sizeunit)
-        self.setWindowTitle("Retro Snake")
+        self.setWindowTitle("Tetris")
 
         # set Background color
         palette =  QPalette()

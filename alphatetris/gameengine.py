@@ -46,6 +46,11 @@ class GameEngine:
             position = (int(self.Nx/2),0)
             self.block = block.Block(position=position,player=self.player)
 
+        # To cancel one line
+        for j in range(self.Ny):
+            if np.sum(self.prearea[:,j]!=0) == self.Nx:
+                self.prearea[:,1:j+1] = self.prearea[:,0:j]
+
     def tocontinue(self):
         for i in range(self.Nx):
             if self.prearea[i,0] != 0:
