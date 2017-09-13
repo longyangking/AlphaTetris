@@ -62,7 +62,8 @@ class GameEngine:
         starttime = time.time()
         self.block.update(self.prearea)
         endtime = time.time()
-        time.sleep(self.timeperiod-(endtime-starttime))
+        if self.timeperiod-(endtime-starttime) > 0:
+            time.sleep(self.timeperiod-(endtime-starttime))
 
         self.updatearea()   # Update Area
 

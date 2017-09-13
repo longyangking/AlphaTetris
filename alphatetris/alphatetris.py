@@ -6,3 +6,4 @@ class AlphaTetris:
     def train(self):
 
     def reinforcement(self):
+

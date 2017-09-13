@@ -133,11 +133,7 @@ class Block:
             
         return True
 
-    def update(self,area):
-        mode = self.player.play(
-            block=self,
-            area=area)
-
+    def action(self,mode,area):
         if mode == 1:
             self.__move(direction=(-1,0),area=area)
         elif mode == 2:
@@ -148,3 +144,11 @@ class Block:
         self.__move(direction=(0,1),area=area)   
         if mode == 4:
             self.__move(direction=(0,1),area=area)
+
+    def update(self,area):
+        mode = self.player.play(
+            block=self,
+            area=area)
+
+        self.action(mode,area)
+        

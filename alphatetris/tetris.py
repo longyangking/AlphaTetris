@@ -8,7 +8,7 @@ class Tetris:
         self.Nx = Nx
         self.Ny = Ny
         self.gameengine = None
-        self.player = player.Human()
+        self.player = player.Computer()
         self.ui = None
 
     def start(self,sizeunit = 15):

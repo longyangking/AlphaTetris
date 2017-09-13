@@ -1,4 +1,5 @@
 import numpy as np 
+import naiveai
 
 class Human:
     def __init__(self):
@@ -14,7 +15,10 @@ class Human:
 
 class Computer:
     def __init__(self):
+        self.ai = naiveai.AI()
+
+    def setdirection(self,mode):
         pass
 
     def play(self,block,area):
-        pass
+        return self.ai.play(block,area)

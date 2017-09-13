@@ -24,6 +24,9 @@ class UI(threading.Thread):
         self.app.exec_()
 
     def setarea(self,area):
+        while self.UI is None:
+            pass
+            
         return self.UI.setarea(area=area)
     
     def gameend(self,score):
