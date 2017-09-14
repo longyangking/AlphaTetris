@@ -48,15 +48,15 @@ class AI:
             value += y
         
         # value table
-        for j in range(miny,maxy+1):
-            if np.sum(area[:,j]) == Nx:
-                value += 300000
-
-            if np.sum(area[:,j]) == Nx-1:
-                value += 10000
-
-            if np.sum(area[:,j]) == Nx-2:
-                value += 500
+        #for j in range(miny,maxy+1):
+        #    if np.sum(area[:,j]) == Nx:
+        #        value += 300000
+        #
+        #    if np.sum(area[:,j]) == Nx-1:
+        #        value += 10000
+        #
+        #    if np.sum(area[:,j]) == Nx-2:
+        #        value += 500
 
         for i in range(minx,maxx+1):
             for j in range(miny,Ny):
