@@ -2,15 +2,18 @@ import numpy as np
 import copy
 
 class AI:
-    def __init__(self,deep=3):
+    def __init__(self,deep=3, verbose=False):
         self.block = None
         self.area = None
         self.deep = deep
 
+        self.verbose = verbose
+
     def __values(self):
         # Calculate the values of modes：{0,1,2,3,4}
         values = list()
-        print('Thinking...')
+        if self.verbose:
+            print('Thinking...')
         for mode in range(5):
             values.append(self.__search(self.block,mode,self.deep))
         return values

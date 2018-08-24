@@ -18,7 +18,6 @@ class UI(threading.Thread):
         self.pressaction = pressaction
     
     def run(self):
-        print('Init UI...')
         self.app = QApplication(sys.argv)
         self.UI = nativeUI.nativeUI(pressaction=self.pressaction,area=self.area,sizeunit=self.sizeunit)
         self.app.exec_()

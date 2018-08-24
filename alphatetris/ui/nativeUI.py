@@ -41,6 +41,7 @@ class nativeUI(QWidget):
                         (screen.height()-size.height())/2,
                         Nx*self.sizeunit, Ny*self.sizeunit)
         self.setWindowTitle("Tetris")
+        self.setWindowIcon(QIcon('./ui/icon.png'))
 
         # set Background color
         palette =  QPalette()
